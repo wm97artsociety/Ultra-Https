@@ -4,16 +4,28 @@
 
 secure-https-enhanced/
 ├── README.md (txt read me file) 
+
+
 ├── LICENSE (MIT) (txt file)
+
 ├── src/ (folder)
+
 │ ├── encryption_engine.js (Src)
+
 │ ├── rotate_keys.js (scr)
+
 │ ├── ddos_guard.js (scr)
+
 │ └── plugin_api.js Scr)
-├── manifest.json (for browser extension)
+
+├── manifest.json main file (for browser extension)
+
 ├── demo/ (folder )
+
 │ └── secure_https_demo.html
+
 └── docs/ (folder)
+
 └── whitepaper.pdf (optional)
 
 
