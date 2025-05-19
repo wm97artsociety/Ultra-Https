@@ -2,6 +2,22 @@
 
 ## Overview
 
+secure-https-enhanced/
+├── README.md (txt read me file) 
+├── LICENSE (MIT) (txt file)
+├── src/ (folder)
+│ ├── encryption_engine.js (Src)
+│ ├── rotate_keys.js (scr)
+│ ├── ddos_guard.js (scr)
+│ └── plugin_api.js Scr)
+├── manifest.json (for browser extension)
+├── demo/ (folder )
+│ └── secure_https_demo.html
+└── docs/ (folder)
+└── whitepaper.pdf (optional)
+
+
+
 This project implements a browser extension and a secure HTTPS content delivery system that:
 
 - Rotates encryption keys every 5 seconds for 10,000 multimedia items (images, audio, video, artwork, music, poetry).
