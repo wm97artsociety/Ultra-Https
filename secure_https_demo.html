@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Secure HTTPS Demo</title>
+  <script type="module" src="../src/encryption_engine.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #challenge { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Secure HTTPS Enhanced Demo</h1>
+  <img id="challengeImage" width="400" height="300" alt="Encrypted content" />
+  <div id="challenge">
+    <p>Solve the challenge (enter key index):</p>
+    <input id="answer" type="text" />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result"></p>
+  </div>
+
+  <script type="module">
+    import { getCurrentKeyIndex } from '../src/encryption_engine.js';
+
+    function checkAnswer() {
+      const answer = parseInt(document.getElementById('answer').value, 10);
+      const correct = getCurrentKeyIndex();
+      const result = document.getElementById('result');
+      if (answer === correct) {
+        result.textContent = "Correct! Access granted.";
+      } else {
+        result.textContent = "Wrong! Access denied.";
+      }
+    }
+
+    // Update challenge image every 5 seconds (simulate)
+    setInterval(() => {
+      // TODO: Load encrypted image from Firebase and decrypt with current key
+      // For demo, just show key index
+      document.getElementById('challengeImage').alt = 'Key index: ' + getCurrentKeyIndex();
+    }, 5000);
+  </script>
+</body>
+</html>
